@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MiniShop</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <a class="logo" href="#">Mini<span>Shop</span></a>
+
+    <nav>
+      <a href="#home">Trang chủ</a>
+      <a href="#products">Sản phẩm</a>
+      <a href="#contact">Liên hệ</a>
+    </nav>
+
+    <button id="openCart" class="cart-btn">
+      <svg class="cart-icon" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M3 3h2l2.2 10.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.6L20 7H6"></path>
+        <circle cx="9" cy="20" r="1.5"></circle>
+        <circle cx="18" cy="20" r="1.5"></circle>
+      </svg>
+      <span>Giỏ hàng</span>
+      <b id="cartCount">0</b>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div>
+        <small>BỘ SƯU TẬP MỚI 2026</small>
+        <h1>
+          Mua sắm thật dễ,<br>
+          <em>phong cách mỗi ngày.</em>
+        </h1>
+        <p>
+          Sản phẩm chất lượng, mức giá tuyệt vời và giao hàng nhanh
+          chóng trên toàn quốc.
+        </p>
+        <a class="cta" href="#products">Mua sắm ngay →</a>
+      </div>
+
+      <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=900&q=80"
+        alt="Cửa hàng thời trang">
+    </section>
+
+    <section class="benefits">
+      <div>
+        🚚
+        <span>
+          <b>Miễn phí vận chuyển</b>
+          <small>Đơn từ 500.000đ</small>
+        </span>
+      </div>
+
+      <div>
+        ↩️
+        <span>
+          <b>Đổi trả dễ dàng</b>
+          <small>Trong vòng 30 ngày</small>
+        </span>
+      </div>
+
+      <div>
+        🔒
+        <span>
+          <b>Thanh toán an toàn</b>
+          <small>Bảo mật tuyệt đối</small>
+        </span>
+      </div>
+
+      <div>
+        💬
+        <span>
+          <b>Hỗ trợ 24/7</b>
+          <small>Luôn sẵn sàng</small>
+        </span>
+      </div>
+    </section>
+
+    <section class="products" id="products">
+      <div class="heading">
+        <div>
+          <small>DÀNH RIÊNG CHO BẠN</small>
+          <h2>Sản phẩm nổi bật</h2>
+        </div>
+
+        <input id="search" type="search" placeholder="🔍 Tìm sản phẩm...">
+      </div>
+
+      <div id="filters" class="filters"></div>
+      <div id="grid" class="grid">
+        <article class="card" data-name="Áo thun Cotton Premium" data-category="Thời trang">
+          <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80"
+            alt="Áo thun Cotton Premium">
+          <div class="info">
+            <small>Thời trang</small>
+            <h3><a href="product.html?id=1">Áo thun Cotton Premium</a></h3>
+            <div class="stars">★★★★★</div>
+            <div class="bottom">
+              <b>289.000đ</b>
+              <button data-add="1" aria-label="Thêm Áo thun Cotton Premium vào giỏ hàng">+</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-name="Giày sneaker Urban" data-category="Giày dép">
+          <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80"
+            alt="Giày sneaker Urban">
+          <div class="info">
+            <small>Giày dép</small>
+            <h3><a href="product.html?id=2">Giày sneaker Urban</a></h3>
+            <div class="stars">★★★★★</div>
+            <div class="bottom">
+              <b>749.000đ</b>
+              <button data-add="2" aria-label="Thêm Giày sneaker Urban vào giỏ hàng">+</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-name="Đồng hồ Minimal" data-category="Phụ kiện">
+          <img src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&w=600&q=80"
+            alt="Đồng hồ Minimal">
+          <div class="info">
+            <small>Phụ kiện</small>
+            <h3><a href="product.html?id=3">Đồng hồ Minimal</a></h3>
+            <div class="stars">★★★★★</div>
+            <div class="bottom">
+              <b>1.250.000đ</b>
+              <button data-add="3" aria-label="Thêm Đồng hồ Minimal vào giỏ hàng">+</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-name="Tai nghe không dây" data-category="Công nghệ">
+          <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80"
+            alt="Tai nghe không dây">
+          <div class="info">
+            <small>Công nghệ</small>
+            <h3><a href="product.html?id=4">Tai nghe không dây</a></h3>
+            <div class="stars">★★★★★</div>
+            <div class="bottom">
+              <b>890.000đ</b>
+              <button data-add="4" aria-label="Thêm Tai nghe không dây vào giỏ hàng">+</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-name="Túi đeo chéo Canvas" data-category="Phụ kiện">
+          <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=600&q=80"
+            alt="Túi đeo chéo Canvas">
+          <div class="info">
+            <small>Phụ kiện</small>
+            <h3><a href="product.html?id=5">Túi đeo chéo Canvas</a></h3>
+            <div class="stars">★★★★★</div>
+            <div class="bottom">
+              <b>399.000đ</b>
+              <button data-add="5" aria-label="Thêm Túi đeo chéo Canvas vào giỏ hàng">+</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-name="Kính mát Classic" data-category="Phụ kiện">
+          <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=600&q=80"
+            alt="Kính mát Classic">
+          <div class="info">
+            <small>Phụ kiện</small>
+            <h3><a href="product.html?id=6">Kính mát Classic</a></h3>
+            <div class="stars">★★★★★</div>
+            <div class="bottom">
+              <b>459.000đ</b>
+              <button data-add="6" aria-label="Thêm Kính mát Classic vào giỏ hàng">+</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-name="Áo khoác Denim" data-category="Thời trang">
+          <img src="https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&w=600&q=80"
+            alt="Áo khoác Denim">
+          <div class="info">
+            <small>Thời trang</small>
+            <h3><a href="product.html?id=7">Áo khoác Denim</a></h3>
+            <div class="stars">★★★★★</div>
+            <div class="bottom">
+              <b>679.000đ</b>
+              <button data-add="7" aria-label="Thêm Áo khoác Denim vào giỏ hàng">+</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-name="Bàn phím cơ Mini" data-category="Công nghệ">
+          <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=600&q=80"
+            alt="Bàn phím cơ Mini">
+          <div class="info">
+            <small>Công nghệ</small>
+            <h3><a href="product.html?id=8">Bàn phím cơ Mini</a></h3>
+            <div class="stars">★★★★★</div>
+            <div class="bottom">
+              <b>1.090.000đ</b>
+              <button data-add="8" aria-label="Thêm Bàn phím cơ Mini vào giỏ hàng">+</button>
+            </div>
+          </div>
+        </article>
+      </div>
+      <p id="empty" class="empty">Không tìm thấy sản phẩm.</p>
+    </section>
+
+    <section class="newsletter" id="contact">
+      <div>
+        <small>ƯU ĐÃI MỖI TUẦN</small>
+        <h2>Nhận ngay mã giảm 15%</h2>
+        <p>Đăng ký để nhận tin về những bộ sưu tập mới.</p>
+      </div>
+
+      <form id="form">
+        <input type="email" required placeholder="Email của bạn">
+        <button type="submit">Đăng ký</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-columns">
+      <div class="footer-column footer-about">
+        <a class="logo" href="#">Mini<span>Shop</span></a>
+        <p>Nơi mua sắm sản phẩm chất lượng với giá hợp lý và dịch vụ tận tâm.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">◎</a>
+          <a href="#" aria-label="TikTok">♪</a>
+          <a href="#" aria-label="YouTube">▶</a>
+        </div>
+      </div>
+
+      j
+
+      <div class="footer-column">
+        <h3>Hỗ trợ khách hàng</h3>
+        <a href="#">Hướng dẫn mua hàng</a>
+        <a href="#">Chính sách đổi trả</a>
+        <a href="#">Chính sách bảo mật</a>
+        <a href="#">Câu hỏi thường gặp</a>
+      </div>
+
+      <div class="footer-column footer-contact">
+        <h3>Thông tin liên hệ</h3>
+        <p>📍 123 Nguyễn Huệ, TP. Hồ Chí Minh</p>
+        <p>☎ 0901 234 567</p>
+        <p>✉ hello@minishop.vn</p>
+        <p>⏰ 08:00 – 21:00, Thứ 2 – Chủ nhật</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 MiniShop. Thiết kế với ❤ tại Việt Nam.</p>
+      <div>
+        <span>Thanh toán an toàn:</span>
+        <b>VISA</b>
+        <b>Mastercard</b>
+        <b>COD</b>
+      </div>
+    </div>
+  </footer>
+
+  <div id="overlay" class="overlay"></div>
+
+  <aside id="cart" class="cart">
+    <div class="cart-head">
+      <h2>Giỏ hàng</h2>
+      <button id="closeCart" aria-label="Đóng giỏ hàng">×</button>
+    </div>
+
+    <div id="cartItems" class="cart-items"></div>
+
+    <div class="cart-foot">
+      <p>Tổng cộng <b id="total">0đ</b></p>
+      <button id="checkout">Thanh toán</button>
+    </div>
+  </aside>
+
+  <div id="toast" class="toast"></div>
+
+  <script type="module" src="./js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết sản phẩm - MiniShop</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <header>
+      <a class="logo" href="index.html">Mini<span>Shop</span></a>
+      <nav>
+        <a href="index.html">Trang chủ</a>
+        <a href="index.html#products">Sản phẩm</a>
+        <a href="index.html#contact">Liên hệ</a>
+      </nav>
+      <button id="openCart" class="cart-btn">
+        <svg class="cart-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 3h2l2.2 10.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.6L20 7H6"></path>
+          <circle cx="9" cy="20" r="1.5"></circle>
+          <circle cx="18" cy="20" r="1.5"></circle>
+        </svg>
+        <span>Giỏ hàng</span>
+        <b id="cartCount">0</b>
+      </button>
+    </header>
+
+    <main class="product-page">
+      <div class="breadcrumb">
+        <a href="index.html">Trang chủ</a>
+        <span>›</span>
+        <a href="index.html#products">Sản phẩm</a>
+        <span>›</span>
+        <span id="breadcrumbName">Áo thun Cotton Premium</span>
+      </div>
+
+      <section class="product-detail">
+        <div class="product-detail-image">
+          <span class="detail-badge">Nổi bật</span>
+          <img
+            id="productImage"
+            src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80"
+            alt="Áo thun Cotton Premium"
+          >
+        </div>
+
+        <div class="product-detail-info">
+          <small id="productCategory">THỜI TRANG</small>
+          <h1 id="productName">Áo thun Cotton Premium</h1>
+          <div class="detail-rating">
+            <span>★★★★★</span>
+            <p>4.9 (128 đánh giá)</p>
+          </div>
+          <p id="productPrice" class="detail-price">289.000đ</p>
+          <p class="detail-description">
+            Sản phẩm được tuyển chọn kỹ lưỡng với chất liệu cao cấp, thiết kế
+            hiện đại và phù hợp để sử dụng mỗi ngày. Cam kết chính hãng và
+            được đổi trả trong vòng 30 ngày.
+          </p>
+
+          <div class="detail-options">
+            <div>
+              <label for="size">Kích thước</label>
+              <select id="size">
+                <option>S</option>
+                <option selected>M</option>
+                <option>L</option>
+                <option>XL</option>
+              </select>
+            </div>
+            <div>
+              <label for="quantity">Số lượng</label>
+              <input id="quantity" type="number" value="1" min="1" max="10">
+            </div>
+          </div>
+
+          <button id="addDetailToCart" class="detail-add-button">
+            <svg class="cart-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M3 3h2l2.2 10.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.6L20 7H6"></path>
+              <circle cx="9" cy="20" r="1.5"></circle>
+              <circle cx="18" cy="20" r="1.5"></circle>
+            </svg>
+            <span>Thêm vào giỏ hàng</span>
+          </button>
+
+          <div class="detail-services">
+            <p>✓ Miễn phí vận chuyển cho đơn hàng từ 500.000đ</p>
+            <p>✓ Đổi trả miễn phí trong vòng 30 ngày</p>
+            <p>✓ Sản phẩm chính hãng, bảo hành đầy đủ</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="overlay" class="overlay"></div>
+    <aside id="cart" class="cart">
+      <div class="cart-head">
+        <h2>Giỏ hàng</h2>
+        <button id="closeCart" aria-label="Đóng giỏ hàng">×</button>
+      </div>
+      <div id="cartItems" class="cart-items"></div>
+      <div class="cart-foot">
+        <p>Tổng cộng <b id="total">0đ</b></p>
+        <button id="checkout">Thanh toán</button>
+      </div>
+    </aside>
+    <div id="toast" class="toast"></div>
+
+    <script type="module" src="./js/product-detail.js"></script>
+  </body>
+</html>

@@ -4,6 +4,7 @@ import { initializeProducts } from "./products.js";
 import "./if_else_toan_tu.js";
 import "./switch_case.js";
 import "./function.js";
+import "./arrow-function.js";
 
 const cart = initializeCart();
 
